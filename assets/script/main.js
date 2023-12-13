@@ -6,3 +6,11 @@ interaction.addEventListener('animationend', jumpHandler)
 function jumpHandler() {
   interaction.classList.toggle('jump')
 }
+
+// Button 1 (Double Click Event)
+
+let frontend = document.querySelector('#buttonOne')
+
+frontend.addEventListener("dblclick", function () {
+  frontend.classList.add("changeColor");
+})

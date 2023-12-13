@@ -8,9 +8,11 @@
   --pill: 2rem;
   --line: 0.1rem;
 }
+
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 2rem;
   padding: 0;
@@ -18,9 +20,11 @@ body {
   font-size: 2rem;
   background: var(--secondary);
 }
+
 section {
   max-width: 90vw;
 }
+
 a {
   display: inline-block;
   margin: 0.2em;
@@ -32,6 +36,7 @@ a {
   font-weight: normal;
   text-decoration: none;
 }
+
 a:hover {
   color: var(--primary);
   border-color: var(--primary);
@@ -58,24 +63,99 @@ a:nth-of-type(12) {
   0% {
     transform: scale(1, 1) translateY(0);
   }
+
   10% {
     transform: scale(1.1, 0.9) translateY(0);
   }
+
   30% {
     transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg);
   }
+
   50% {
     transform: scale(1.05, 0.95) translateY(0);
   }
+
   57% {
     transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg);
   }
+
   64% {
     transform: scale(1, 1) translateY(0);
   }
+
   100% {
     transform: scale(1, 1) translateY(0);
   }
 }
 
+/* Laten zien wat er gebeurd */
+#buttonOne:hover span,
+#buttonTwo:hover span,
+#buttonThree:hover span,
+#buttonFour:hover span,
+#buttonFive:hover span,
+#buttonSix:hover span,
+#buttonSeven:hover span,
+#buttonEight:hover span,
+#buttonNine:hover span,
+#buttonTen:hover span {
+  display: none;
+}
+
+/* Button 1 */
+#buttonOne:hover:after {
+  content: 'Double click';
+}
+
+/* Button 2 */
+#buttonTwo:hover:after {
+  content: 'Double click';
+}
+
+/* Button 3 */
+#buttonThree:hover:after {
+  content: 'Double click';
+}
+
+/* Button 4 */
+#buttonFour:hover:after {
+  content: 'Double click';
+}
+
+/* Button 5 */
+#buttonFive:hover:after {
+  content: 'Double click';
+}
+
+/* Button 6 */
+#buttonSix:hover:after {
+  content: 'Double click';
+}
+
+/* Button 7 */
+#buttonSeven:hover:after {
+  content: 'Double click';
+}
+
+/* Button 8 */
+#buttonEight:hover:after {
+  content: 'Double click';
+}
+
+/* Button 9 */
+#buttonNine:hover:after {
+  content: 'Double click';
+}
+
+/* Button 10 */
+#buttonTen:hover:after {
+  content: 'Double click';
+}
+
 /* Jouw animaties */
+/* Button 1 */
+.changeColor {
+  background: var(--highlight-primary);
+  color: var(--secondary);
+}
