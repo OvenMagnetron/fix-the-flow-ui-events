@@ -110,52 +110,204 @@ a:nth-of-type(12) {
 
 /* Button 2 */
 #buttonTwo:hover:after {
-  content: 'Double click';
+  content: 'Muis over / Mouse out';
 }
 
 /* Button 3 */
 #buttonThree:hover:after {
-  content: 'Double click';
+  content: 'Click = Change size';
 }
 
 /* Button 4 */
 #buttonFour:hover:after {
-  content: 'Double click';
+  content: 'Click = Poof';
 }
 
 /* Button 5 */
 #buttonFive:hover:after {
-  content: 'Double click';
+  content: 'Click = Shake';
 }
 
 /* Button 6 */
 #buttonSix:hover:after {
-  content: 'Double click';
+  content: 'Click = Flip';
 }
 
 /* Button 7 */
 #buttonSeven:hover:after {
-  content: 'Double click';
+  content: 'Click = Flash';
 }
 
 /* Button 8 */
 #buttonEight:hover:after {
-  content: 'Double click';
+  content: 'Click = Hyper';
 }
 
 /* Button 9 */
 #buttonNine:hover:after {
-  content: 'Double click';
+  content: 'Click = Disco';
 }
 
 /* Button 10 */
 #buttonTen:hover:after {
-  content: 'Double click';
+  content: 'Click then touch any key';
 }
 
 /* Jouw animaties */
-/* Button 1 */
+/* Button 1 & 2 */
 .changeColor {
   background: var(--highlight-primary);
   color: var(--secondary);
+}
+
+/* Button 3 */
+.changeSize {
+  padding: 1.4em 1.8em;
+}
+
+/* Button 4 */
+.poof {
+  animation-name: poof;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes poof {
+  0% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0.5;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+/* Button 5 */
+.shake {
+
+  animation-name: shake;
+  animation-duration: 2s;
+  animation: shake 0.5s linear;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+/* Button 6 */
+.flip {
+  animation: flip 2s;
+}
+
+@keyframes flip {
+  from {
+    transform: rotateX(0deg);
+  }
+
+  to {
+    transform: rotateX(180deg);
+  }
+}
+
+/* Button 7 */
+.flash {
+  animation: flash 3s linear;
+}
+
+@keyframes flash {
+  0% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateX(100vw);
+  }
+
+  66% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Button 8 */
+.hyper {
+  animation-name: hyper;
+  animation-duration: 0.2s;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-iteration-count: 3;
+}
+
+@keyframes hyper {
+  0% {
+    transform: translateY(0);
+  }
+
+  33% {
+    transform: translateY(-1em);
+  }
+
+  50% {
+    transform: translateY(0.5em);
+  }
+
+  66% {
+    transform: translateY(-2em);
+  }
+
+  80% {
+    transform: translateY(0.5em);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Button 9 */
+.disco {
+  animation-name: disco;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+}
+
+@keyframes disco {
+  0% {
+    background-color: var(--highlight-secondary);
+  }
+
+  50% {
+    background-color: var(--highlight-primary);
+  }
+
+  100% {
+    background-color: var(--primary);
+  }
 }
